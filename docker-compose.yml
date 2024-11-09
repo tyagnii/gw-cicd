@@ -3,9 +3,8 @@ version: "3"
 services:
   wallet:
     build:
-      context: https://github.com/tyagnii/gw-currency-wallet.git#entire_project
+      context: https://github.com/tyagnii/gw-currency-wallet.git
       dockerfile: ./Dockerfile
-    command: ./bin/server serve
     ports:
       - 8080:8080
     depends_on:
@@ -13,9 +12,8 @@ services:
 
   exchanger:
     build:
-      context: https://github.com/tyagnii/gw-exchanger.git#entire_project
+      context: https://github.com/tyagnii/gw-exchanger.git
       dockerfile: ./Dockerfile
-    command: ./bin/server serve
     depends_on:
       - db
 
